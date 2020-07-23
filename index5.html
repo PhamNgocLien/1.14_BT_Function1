@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Function and aray</title>
+</head>
+<body>
+<script>
+    let name = prompt("Please input star's name");
+    let arr1 = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let arr2 = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+    function findName(inputname) {
+        let flag = true;
+        let star = [];
+        let i = 0
+        for (i = 0; i < arr1.length; i++) {
+            if (inputname == arr1[i]) {
+                flag = true;
+                star.push(arr2[i]);
+                break;
+            } else {
+                flag = false;
+            }
+        }
+        if (flag) {
+            alert("Chòm sao của " + arr1[i] + " là: " + star.toString());
+        } else {
+            alert("Please try again!");
+        }
+    }
+    findName(name);
+</script>
+</body>
+</html>
